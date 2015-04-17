@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="tiendaStore">
+    <head>
+        <title>SportsStore</title>
+        <script src="angularjs/angular.min.js"></script>
+<!--        <script src="bootstrap/js/bootstrap.js"></script> -->
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+        <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
+        <script>
+            //angular.module("tiendaStore", ["customFilters","factura"]);
+            angular.module("tiendaStore", ["customFilters"]);
+        </script>
+        <script src="controllers/tiendaController.js"></script>
+        <script src="filters/customFilters.js"></script>
+        <script src="controllers/productosController.js"></script>
+        <!-- <script src="components/factura/factura.js"></script> -->
+    </head>
+    <body ng-controller="tiendaStoreCtrl">
+        <div class="navbar navbar-inverse">
+            <a class="navbar-brand" href="#">TIENDA BOUTIQUE</a>
+            <!--<cart-summary />-->
+        </div>
+        <ng-include src="'views/productoList.html'"></ng-include>
+    </body>
+</html>

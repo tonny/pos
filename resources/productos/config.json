@@ -1,0 +1,37 @@
+{
+	"type": "Collection",
+	"properties": {
+		"nombre": {
+			"name": "nombre",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "nombre",
+			"order": 0
+		},
+		"descripcion": {
+			"name": "descripcion",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "descripcion",
+			"order": 1
+		},
+		"precio": {
+			"name": "precio",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "precio",
+			"order": 2
+		},
+		"categoria": {
+			"name": "categoria",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "categoria",
+			"order": 3
+		}
+	}
+}

@@ -1,0 +1,23 @@
+<div class="panel panel-default row" ng-controller="productosCtrl">
+    <div class="col-xs-3">
+        <a ng-click="selectCategory()" class="btn btn-block btn-default btn-lg">Todos</a>
+        <a ng-repeat="item in data.productos | orderBy:'categoria' | unique:'categoria'"
+        ng-click="selectCategory(item)" class=" btn btn-block btn-default btn-lg" ng-class="getCategoryClass(item)">
+        {{item}}
+        </a>
+    </div>
+    <div class="col-xs-8">
+        <div class="well" ng-repeat="item in data.productos | filter:categoryFilterFn">
+            <h3>
+                <strong>{{item.nombre}}</strong>
+                <span class="pull-right label label-primary">
+                    {{item.precio | currency:"Bs. "}}
+                </span>
+                <button class="btn btn-success pull-right">
+                    Agregar
+                </button>
+            </h3>
+            <span class="lead">{{item.descripcion}}</span>
+        </div>
+    </div>
+</div>
